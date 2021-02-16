@@ -27,21 +27,18 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
+          'style-loader',
           'css-loader'
         ]
       }
     ]
   },
+  // Hemos quitado el plugin de MiniCssExtract ya que el style-loader es mas rapido en desarrollo.
+  // En produccion seria mas conveniente el MiniCssExtract
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Plugin'
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css'
+      title: 'webpack-dev-server'
     })
   ]
 };

@@ -1,5 +1,5 @@
 function text() {
-    document.body.innerHTML  = 'Hola mundo 100';
+    document.body.innerHTML  = 'Hola mundo 10000000';
 }
 
 
